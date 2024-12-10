@@ -2,3 +2,8 @@ body {
     background-color: black;
     color:white;
 }
+
+#main-image{
+    width: 50%;
+    height: 50%;
+}
