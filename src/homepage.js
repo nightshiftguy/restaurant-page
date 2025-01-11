@@ -1,6 +1,6 @@
 import restaurantImg from "./img/restaurant.jpg";
 
-export default function pageLoad(){
+export default function loadHomePage(){
     const container = document.querySelector("#content");
 
     const mainImage = document.createElement("img");
