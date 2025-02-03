@@ -1,9 +1,12 @@
 import pizzaImg from "./img/pizza.png";
 
-export default function loadMenuPage(){
-    const container = document.querySelector("#content")
+export default function loadMenuPage() {
+    const container = document.querySelector("#content");
+    const menuContainer = document.createElement("div");
+    menuContainer.setAttribute("id","menu-container");
+
     const header = document.createElement("h1");
-    header.textContent="Menu";
+    header.textContent = "Menu";
 
     const menuImg = document.createElement("img");
     menuImg.setAttribute("id", "menu-image");
@@ -13,11 +16,11 @@ export default function loadMenuPage(){
 
     const tblHead = document.createElement("thead");
     const tblNameH = document.createElement("th");
-    tblNameH.textContent="Name:";
-    tblNameH.colSpan=1;
+    tblNameH.textContent = "Name:";
+    tblNameH.colSpan = 1;
     const tblPriceH = document.createElement("th");
-    tblPriceH.textContent="Price:";
-    tblPriceH.colSpan=1;
+    tblPriceH.textContent = "Price:";
+    tblPriceH.colSpan = 1;
     tblHead.appendChild(tblNameH);
     tblHead.appendChild(tblPriceH);
 
@@ -26,12 +29,12 @@ export default function loadMenuPage(){
     let menu = [
         ["Pepperoni", "12,9 $"],
         ["Margarita", "22,5 $"],
-        ["Capriciosa", "2 $"]]; 
-    for(let row of menu){
+        ["Capriciosa", "2 $"]];
+    for (let row of menu) {
         const tr = document.createElement("tr");
-        for(let item of row){
+        for (let item of row) {
             const td = document.createElement("td");
-            td.textContent=item;
+            td.textContent = item;
             tr.appendChild(td);
         }
         tblBody.appendChild(tr);
@@ -40,7 +43,9 @@ export default function loadMenuPage(){
     tbl.appendChild(tblHead);
     tbl.appendChild(tblBody);
 
-    container.appendChild(header);
-    container.appendChild(menuImg);
-    container.appendChild(tbl);
+    menuContainer.appendChild(header);
+    menuContainer.appendChild(menuImg);
+    menuContainer.appendChild(tbl);
+
+    container.appendChild(menuContainer);
 }

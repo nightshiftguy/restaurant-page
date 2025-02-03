@@ -4,6 +4,7 @@ export default function loadLocationPage(){
     const container = document.querySelector("#content");
 
     const location = document.createElement("div");
+    location.setAttribute("class","image-with-text-container");
 
     const locationL = document.createElement("div");
     const locationImg = document.createElement("img");
@@ -18,6 +19,8 @@ export default function loadLocationPage(){
     locationR.appendChild(header);
     locationR.appendChild(text);
 
-    container.appendChild(locationL); 
-    container.appendChild(locationR);
+    location.appendChild(locationL); 
+    location.appendChild(locationR);
+
+    container.appendChild(location);
 }

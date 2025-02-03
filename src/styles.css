@@ -1,19 +1,62 @@
+:root{
+    --main-color:#16C47F;
+    --secondary-color:#FFD65A;
+    --secondary-color-dark:#947c36;
+    --third-color:#998368;
+    --black:#0a0904;
+    --gray:#04271a;
+    --white:#e7f3ee;
+}
+
 body {
-    background-color: black;
-    color:white;
-    margin:0;
-    padding:0 100px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: var(--black);
+    color:var(--white);
+    margin:0 100px;
+    padding:0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 30px;
+}
+
+td, th{
+    border:1px solid var(--white);
+    padding:10px 30px;
+}
+
+th{
+    background-color: var(--gray);
 }
 
 button{
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 20px;
+    border:none;
+    background-color: var(--secondary-color);
 }
 
 button:hover{
-    background-color: black;
-    color:white;
+    background-color: var(--secondary-color-dark);
     cursor: pointer;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+    margin-top: 10px;
+    margin-bottom:30px;
+}
+
+nav > button{
+    height: 50px;
+    flex:auto;
 }
 
 #main-image{
@@ -21,14 +64,26 @@ button:hover{
     height: 50%;
 }
 
-nav{
-    display:flex;
-    justify-content: space-between;
-    gap:50px;
-    margin-bottom:30px;
+#menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-nav > button{
-    height: 50px;
-    flex:auto;
+#menu-container > *{
+    margin-bottom: 20px;
+}
+
+#menu-image{
+    width:3rem;
+    height:auto;
+}
+
+.image-with-text-container{
+    display: flex;
+    gap: 5rem;
+    background-color: var(--third-color);
+    padding:20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
 }

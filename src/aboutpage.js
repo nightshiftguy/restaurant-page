@@ -5,6 +5,7 @@ export default function loadAboutPage(){
     const container = document.querySelector("#content");
 
     const history = document.createElement("div");
+    history.setAttribute("class","image-with-text-container");
 
     const historyL = document.createElement("div");
     const historyHeader = document.createElement("h2");
@@ -24,6 +25,7 @@ export default function loadAboutPage(){
     
 
     const founder = document.createElement("div");
+    founder.setAttribute("class","image-with-text-container");
 
     const founderL = document.createElement("div");
     const founderImg = document.createElement("img");
@@ -41,11 +43,6 @@ export default function loadAboutPage(){
     founder.appendChild(founderL);
     founder.appendChild(founderR);
 
-
-    const text = document.createElement("p");
-    text.textContent = "about page";
-
     container.appendChild(history);
     container.appendChild(founder);
-    container.appendChild(text);
 }
